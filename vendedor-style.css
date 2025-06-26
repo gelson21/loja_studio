@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #28a745; /* Verde Principal */
+    --primary-color-darker: #218838; /* Verde Escuro para Hover */
+    --secondary-color: #f8f9fa; /* Fundo levemente acinzentado */
+    --text-color: #333;
+    --light-gray: #ddd;
+    --white: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-radius: 10px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 15px var(--shadow-color);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+table thead tr {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+table tbody tr {
+    background-color: var(--white);
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f8f8f8;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+}
+
+
+button, .button {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover, .button:hover {
+    background-color: var(--primary-color-darker);
+    transform: translateY(-2px);
+}
+
+.button-danger {
+    background-color: var(--error-color);
+}
+
+.button-danger:hover {
+    background-color: #c82333;
+}
+
+.button-edit {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button-edit:hover {
+    background-color: #e0a800;
+}
+
+.back-button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.back-button a {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: var(--primary-color-darker);
+} 

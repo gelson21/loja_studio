@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(120deg, #43e97b 0%, #38f9d7 100%);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Imagem animada como background */
+    background-image: url('c4.jpej'), linear-gradient(120deg, #43e97b 0%, #38f9d7 100%);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    animation: cadastroBgMove 18s linear infinite alternate;
+}
+@keyframes cadastroBgMove {
+    0% { background-position: 0% 0%, center; }
+    100% { background-position: 100% 100%, center; }
+}
+.container {
+    background: rgba(255,255,255,0.97);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #38f9d722;
+    padding: 40px 30px 30px 30px;
+    max-width: 400px;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    color: #0a3d2c;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 8px #fff9, 0 2px 8px #38f9d7;
+}
+label {
+    font-weight: bold;
+    color: #0a3d2c;
+    margin-bottom: 6px;
+    display: block;
+}
+input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #38f9d7;
+    border-radius: 8px;
+    background: #f0fff0;
+    color: #0a3d2c;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+input:focus, select:focus {
+    border: 1.5px solid #43e97b;
+    outline: none;
+}
+button {
+    width: 100%;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #0a3d2c;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #38f9d7aa;
+    transition: background 0.2s, color 0.2s;
+}
+button:hover {
+    background: #0a3d2c;
+    color: #fff;
+}
+.error {
+    color: #e74c3c;
+    background: #fff0f0;
+    border: 1px solid #e74c3c;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+#senhaConfirmacaoGroup label {
+    margin-top: 8px;
+}
+.voltar-container {
+    text-align:center;
+    margin: 30px;
+}
+.voltar-container a {
+    text-decoration:none;
+}
+.voltar-container button {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #0a3d2c;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #38f9d7aa;
+    transition: background 0.2s, color 0.2s;
+}
+.voltar-container button:hover {
+    background: #0a3d2c;
+    color: #fff;
+} 

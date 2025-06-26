@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #43e97b 0%, #38f9d7 100%);
+    color: #0a3d2c;
+    min-height: 100vh;
+    display: flex;
+}
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #38f9d7 0%, #43e97b 100%);
+    padding: 60px 30px 30px 30px;
+    box-sizing: border-box;
+    box-shadow: 2px 0 16px rgba(56,249,215,0.12);
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.login-box {
+    border-radius: 12px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 16px #38f9d722;
+    padding: 30px 24px;
+    width: 100%;
+    max-width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.login-box:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px #38f9d7aa;
+}
+.login-box h3 {
+    margin-top: 0;
+    color: #0a3d2c;
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.login-box a {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #0a3d2c;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.08rem;
+    margin-top: 18px;
+    box-shadow: 0 2px 8px #38f9d7aa;
+    transition: background 0.2s, color 0.2s;
+}
+.login-box a:hover {
+    background: #0a3d2c;
+    color: #fff;
+}
+.content {
+    flex: 1;
+    padding: 60px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Imagem animada como background */
+    background-image: url('c4.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: moveBg 18s linear infinite alternate;
+}
+@keyframes moveBg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+.content h1 {
+    color: #0a3d2c;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 8px #fff9, 0 2px 8px #38f9d7;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+.content p {
+    font-size: 1.2rem;
+    color: #228B22;
+    font-weight: bold;
+    margin-bottom: 0;
+    background: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 8px 20px;
+}
+.advertisement {
+    width: 260px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    padding: 60px 30px 30px 30px;
+    text-align: center;
+    box-shadow: -2px 0 16px rgba(56,249,215,0.12);
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    /* Animação de background */
+    background-image: url('bg-ads.gif'), linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    animation: adsBgMove 12s linear infinite alternate;
+}
+@keyframes adsBgMove {
+    0% { background-position: 0% 0%, center; }
+    100% { background-position: 100% 100%, center; }
+}
+.advertisement h2 {
+    color: #0a3d2c;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.advertisement p {
+    color: #228B22;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+.ad-img {
+    width: 170px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px #38f9d7aa;
+    animation: float 3s ease-in-out infinite alternate;
+}
+.ad-img2 {
+    animation: pulse 2.5s infinite alternate;
+}
+.ad-img3 {
+    animation: rotate 6s linear infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(-18px);}
+}
+@keyframes pulse {
+    0% { filter: brightness(1);}
+    100% { filter: brightness(1.25);}
+}
+@keyframes rotate {
+    0% { transform: rotate(-2deg);}
+    100% { transform: rotate(6deg);}
+}
+@media (max-width: 900px) {
+    .sidebar, .advertisement {
+        display: none;
+    }
+    .content {
+        padding: 40px 10px;
+    }
+} 
